@@ -56,6 +56,5 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="appveyor.yml" />
   </ItemGroup>
 </Project>
