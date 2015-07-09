@@ -1,0 +1,24 @@
+﻿version: 0.1.{build}
+
+before_build:
+  - nuget restore
+
+branches:
+  only:
+    - master
+
+cache:
+  - packages -> **\packages.config
+
+assembly_info:
+  patch: true
+  file: AssemblyInfo.*
+  assembly_version: "0.1.{build}"
+  assembly_file_version: "{version}"
+  assembly_informational_version: "{version}"
+
+configuration: Release
+
+test:
+  assemblies:
+    - '**\*.Tests.dll'
