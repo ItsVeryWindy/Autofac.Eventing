@@ -7,6 +7,9 @@ branches:
 cache:
   - packages -> **\packages.config
 
+init:
+  - git config --global core.autocrlf true
+
 assembly_info:
   patch: true
   file: AssemblyInfo.*
